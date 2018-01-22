@@ -1,1 +1,7 @@
-<h1>Fuck</h1>
+<h2>Gallery</h2>
+
+<% @photos.each do |photo| %>
+  <%= photo.title %>
+  <%= image_tag(photo.image, height: '300px', width: '300px') %>
+  <%= link_to 'show', photo_path(photo)%>
+<%end%>
