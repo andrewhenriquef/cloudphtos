@@ -1,0 +1,5 @@
+<h2><%= @photo.title %> uploaded <%= distance_of_time_in_words(@photo.created_at, Time.now)%> ago</h2>
+<%= link_to 'Delete', photo_path(@photo), method: 'delete'%>
+<%= link_to 'Back', photos_path%>
+
+<%= image_tag @photo.image %>
