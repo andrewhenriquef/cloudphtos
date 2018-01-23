@@ -1,7 +1,16 @@
 <h2>Gallery</h2>
 
-<% @photos.each do |photo| %>
-  <%= photo.title %>
-  <%= image_tag(photo.image, height: '300px', width: '300px') %>
-  <%= link_to 'show', photo_path(photo)%>
-<%end%>
+<div class="row">
+  <% @photos.each do |photo| %>
+    <%= link_to photo_path(photo), class: 'photos-gallery text-center' do %>
+      <div class="card">
+        <%= image_tag(photo.image, height: '200px', width: '100%', alt: photo.title) %>
+        <div class="card-block">
+        <span class="image-title ">
+          <%= photo.title%>
+        </span>
+      </div>
+    </div>
+    <%end%>
+  <%end%>
+</div>
