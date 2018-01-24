@@ -67,3 +67,4 @@ gem 'carrierwave-aws', '~> 1.3'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem "font-awesome-rails"
