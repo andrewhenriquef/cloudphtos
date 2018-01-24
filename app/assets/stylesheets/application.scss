@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-
+//index photos
 .photos-gallery {
   padding-left: 10px;
   padding-top: 10px;
@@ -8,9 +8,25 @@
 
 .card {
   width: 17rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 
-.image-title {
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-image-title {
   font-family: 'Caveat', cursive;
   font-size: 20px;
+}
+
+.index-title {
+  font-family: 'Caveat', cursive;
+  font-size: 44px;
+}
+
+body {
+  background-image: url('playstation-pattern.png');
+  background-repeat: repeat;
 }

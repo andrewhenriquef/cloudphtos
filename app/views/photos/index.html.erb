@@ -1,4 +1,4 @@
-<h2>Gallery</h2>
+<h2 class="text-center index-title"><%= current_user.email %> gallery</h2>
 
 <div class="row">
   <% @photos.each do |photo| %>
@@ -6,7 +6,7 @@
       <div class="card">
         <%= image_tag(photo.image, height: '200px', width: '100%', alt: photo.title) %>
         <div class="card-block">
-        <span class="image-title ">
+        <span class="card-image-title">
           <%= photo.title%>
         </span>
       </div>
