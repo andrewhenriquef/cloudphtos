@@ -1,16 +1,33 @@
 <h2 class="text-center index-title"><%= current_user.email %> gallery</h2>
-
-<div class="row">
-  <% @photos.each do |photo| %>
-    <%= link_to photo_path(photo), class: 'photos-gallery text-center' do %>
-      <div class="card">
-        <%= image_tag(photo.image, height: '200px', width: '100%', alt: photo.title) %>
-        <div class="card-block">
-        <span class="card-image-title">
-          <%= photo.title%>
-        </span>
-      </div>
-    </div>
+  
+  
+<%if @photos.empty? %>
+  <div class="col-md-12 text-center upload-new-photo-title"><span> Upload a new photo </span></div>
+  <div class="col-md-12 text-center upload-new-photo">
+    <%= link_to new_photo_path do %>
+      <%= fa_icon "plus-circle", class: "upload-new-photo-icon plus-icon text-muted pull-left"%>
     <%end%>
+  </div>
+<%else%>
+  <%= link_to new_photo_path, class: "link-inline" do %>
+    <div class="col-md-12 new-photo-link-inline"> 
+      <span class="new-photo-title-link-inline">Upload a new photo</span>
+      <%= fa_icon "plus-circle", class: "new-photo-icon-link-inline plus-icon text-muted pull-left"%>
+    </div>
   <%end%>
-</div>
+  
+  <div class="row photos">
+    <% @photos.each do |photo| %>
+      <%= link_to photo_path(photo), class: 'photos-gallery text-center' do %>
+        <div class="card">
+          <%= image_tag(photo.image, height: '200px', width: '100%', alt: photo.title) %>
+          <div class="card-block">
+            <span class="card-image-title">
+              <%= photo.title%>
+            </span>
+          </div>
+        </div>
+      <%end%>
+    <%end%>
+  </div>
+<%end%>

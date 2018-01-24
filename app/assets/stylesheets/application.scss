@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 //index photos
 .photos-gallery {
@@ -14,6 +15,7 @@
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
 }
 
 .card-image-title {
@@ -21,9 +23,63 @@
   font-size: 20px;
 }
 
+.card-image-title{
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.photos-gallery:hover {
+  text-decoration: none;
+}
+
 .index-title {
   font-family: 'Caveat', cursive;
   font-size: 44px;
+  margin-bottom: 30px;
+}
+
+.upload-new-photo-title{
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+}
+
+.upload-new-photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.upload-new-photo-icon {
+  font-size: 200px;
+  margin-right: 0px !important;
+}
+
+.photos{
+  margin-bottom: 30px;
+}
+
+.new-photo-link-inline {
+  display: flex;
+  justify-content: center;
+}
+
+.new-photo-icon-link-inline {
+  font-size: 80px;
+}
+
+.new-photo-link-inline > .new-photo-title-link-inline {
+  padding-top: 27px;
+  margin-right: 10px;
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+
+}
+
+.link-inline:hover{
+  text-decoration: none;
 }
 
 body {
