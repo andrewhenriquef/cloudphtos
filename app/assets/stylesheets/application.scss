@@ -70,12 +70,16 @@
   font-size: 80px;
 }
 
-.new-photo-link-inline > .new-photo-title-link-inline {
+.new-photo-title-link-inline{
   padding-top: 27px;
   margin-right: 10px;
   font-family: 'Caveat', cursive;
   font-size: 24px;
+  float: left;
+}
 
+.link-inline {
+  padding-left: 75px;
 }
 
 .link-inline:hover{

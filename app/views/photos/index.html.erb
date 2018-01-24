@@ -1,6 +1,5 @@
 <h2 class="text-center index-title"><%= current_user.email %> gallery</h2>
   
-  
 <%if @photos.empty? %>
   <div class="col-md-12 text-center upload-new-photo-title"><span> Upload a new photo </span></div>
   <div class="col-md-12 text-center upload-new-photo">
@@ -9,12 +8,13 @@
     <%end%>
   </div>
 <%else%>
-  <%= link_to new_photo_path, class: "link-inline" do %>
-    <div class="col-md-12 new-photo-link-inline"> 
+
+  <div class="new-photo-link-inline">
+    <%= link_to new_photo_path, class: "col-md-4 link-inline" do %>
       <span class="new-photo-title-link-inline">Upload a new photo</span>
       <%= fa_icon "plus-circle", class: "new-photo-icon-link-inline plus-icon text-muted pull-left"%>
-    </div>
-  <%end%>
+    <%end%>
+  </div>
   
   <div class="row photos">
     <% @photos.each do |photo| %>
