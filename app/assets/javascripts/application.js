@@ -17,3 +17,11 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $("input[type=file]").change(function(){
+    //console.log(document.getElementById("image-field").files[0].name);
+    document.getElementById('file-inputed').style.display = 'block'
+    $('#file-inputed').text(document.getElementById("image-field").files[0].name);
+  });
+});

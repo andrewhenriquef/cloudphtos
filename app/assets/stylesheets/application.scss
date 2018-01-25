@@ -90,3 +90,42 @@ body {
   background-image: url('playstation-pattern.png');
   background-repeat: repeat;
 }
+
+.card-upload {
+  min-width: 350px;
+  padding: 40px 30px;
+  font-family: 'Caveat', cursive;
+}
+
+.upload-button{
+  font-size: 20px;
+}
+
+
+.card-upload > .form-buttons{
+  font-size: 20px;
+}
+
+
+.title-group{
+  font-size: 20px;
+}
+
+.btn-save {
+  font-size: 20px;
+}
+
+
+.form-buttons {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.form-buttons > a{
+  padding: 0px;
+  font-size: 20px;
+}
+
+.form-buttons > a:hover {
+  text-decoration: none;
+}
