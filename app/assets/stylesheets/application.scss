@@ -39,6 +39,7 @@
   margin-bottom: 30px;
 }
 
+//new form
 .upload-new-photo-title{
   font-family: 'Caveat', cursive;
   font-size: 28px;
@@ -135,3 +136,47 @@ body {
 #image-selected {
   margin-bottom: 10px; 
 }
+
+//show image
+.image-options {
+  font-family: 'Caveat', cursive;
+  font-size: 35px;
+}
+
+.photo-image {
+  width: 90%;
+  height: auto;
+}
+
+.photo-title{
+  font-size: 60px;
+}
+
+.image-options > a:hover {
+  text-decoration: none;
+  padding: 0px 15px;
+}
+
+.back-link {
+  font-size: 27px;
+}
+
+.back-link:hover {
+  text-decoration: none;
+}
+
+.image-options-buttons {
+  margin-bottom: 100px;
+}
+.image-options-buttons > span {
+  font-size: 20px;
+  float: right;
+  padding: 7px;
+}
+
+.image-options-buttons > a {
+  font-size: 20px;
+  float: left;
+  padding: 7px;
+}
+

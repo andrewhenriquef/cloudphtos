@@ -1,5 +1,25 @@
-<h2><%= @photo.title %> uploaded <%= distance_of_time_in_words(@photo.created_at, Time.now)%> ago</h2>
-<%= link_to 'Delete', photo_path(@photo), method: 'delete'%>
-<%= link_to 'Back', photos_path%>
+<div class="row">
+  
+  
+  <div class="col-md-4 text-center image-options">
 
-<%= image_tag @photo.image %>
+    <div class="col-md-12 image-options-buttons">
+      <%= link_to 'Delete', photo_path(@photo), class: 'btn btn-danger btn-block btn-delete', method: 'delete', data: {confirm: "Are you sure?"} %>    
+      <%= link_to 'Back', photos_path, class: "back-link"%>
+      <span>
+        Image uploaded <%= distance_of_time_in_words(@photo.created_at, Time.now)%> ago
+      </span>
+
+    </div>
+
+    <%= @photo.title %>
+         
+  </div>
+
+  <div class="col-md-8">
+    <%= image_tag @photo.image, class: 'photo-image img-thumbnail' %>
+  </div>
+</div>
+
+
+
