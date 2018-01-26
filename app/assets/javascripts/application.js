@@ -18,10 +18,39 @@
 //= require turbolinks
 //= require_tree .
 
+
+//set image name in a label when image is ready to be uploaded
+
 $(document).ready(function(){
   $("input[type=file]").change(function(){
     //console.log(document.getElementById("image-field").files[0].name);
-    document.getElementById('file-inputed').style.display = 'block'
-    $('#file-inputed').text(document.getElementById("image-field").files[0].name);
+    //document.getElementById('file-inputed').style.display = 'block';
+    //set text of label as the name of file inputed
+    //$('#file-inputed').text(document.getElementById("image-field").files[0].name);
   });
 });
+
+//this function set the image upload in a image tag to user preview the image
+function readURL(input) {
+  document.getElementById('image-selected').style.display = 'block';
+
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function (e) {
+      //change label to show in form view of photos
+      document.getElementById('file-inputed').style.display = 'block';
+      //show image name in label tag
+      $('#file-inputed')
+        .text(document.getElementById("image-field").files[0].name);
+      //set image preview in image tag
+      $('#image-selected')
+        .attr('src', e.target.result)
+        .width('100%')
+        .height('auto')
+        .attr('alt', input.files[0].name);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}

@@ -91,10 +91,12 @@ body {
   background-repeat: repeat;
 }
 
-.card-upload {
-  min-width: 350px;
-  padding: 40px 30px;
+.card-upload {    
+  min-width: 420px;
+  //top right botton left
+  padding: 25px 30px;
   font-family: 'Caveat', cursive;
+
 }
 
 .upload-button{
@@ -128,4 +130,8 @@ body {
 
 .form-buttons > a:hover {
   text-decoration: none;
+}
+
+#image-selected {
+  margin-bottom: 10px; 
 }
