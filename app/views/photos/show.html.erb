@@ -3,17 +3,16 @@
   
   <div class="col-md-4 text-center image-options">
 
-    <div class="col-md-12 image-options-buttons">
-      <%= link_to 'Delete', photo_path(@photo), class: 'btn btn-danger btn-block btn-delete', method: 'delete', data: {confirm: "Are you sure?"} %>    
-      <%= link_to 'Back', photos_path, class: "back-link"%>
-      <span>
-        Image uploaded <%= distance_of_time_in_words(@photo.created_at, Time.now)%> ago
-      </span>
-
+    <div class="image-options-buttons row">
+      <%= link_to 'Back', photos_path, class: "back-link col-md-4"%>
+      <%= link_to 'Delete', photo_path(@photo), class: 'col-md-8 btn btn-danger btn-block btn-delete', method: 'delete', data: {confirm: "Are you sure?"} %>    
+      
+      <span class="text-right col-md-12">
+      Image uploaded <%= distance_of_time_in_words(@photo.created_at, Time.now)%> ago
+    </span>
     </div>
 
-    <%= @photo.title %>
-         
+    <div class="col-md-12 text-justify photo-title"><%= if @photo.title.blank? then 'No title to show' else @photo.title end %></div>       
   </div>
 
   <div class="col-md-8">

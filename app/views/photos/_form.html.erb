@@ -11,7 +11,7 @@
 			<%= form.file_field :image, style: 'display:none;', id: 'image-field', onchange: 'readURL(this)' %>
 		</label>
 		<label class="text-center" id="file-inputed" style="display:none;"></label>
-		<img id="image-selected" src="" alt="" height="42" width="42" style="display:none;">
+		<img id="image-selected" src="" alt="" height="42" width="42" style="display:none;", class="img-thumbnail" >
 
 		<div class="form-buttons row">
 			<%= link_to 'back', photos_path, class: 'col-md-4' %>

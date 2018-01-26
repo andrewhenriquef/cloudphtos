@@ -149,7 +149,7 @@ body {
 }
 
 .photo-title{
-  font-size: 60px;
+  padding-left: 30px;
 }
 
 .image-options > a:hover {
@@ -165,13 +165,8 @@ body {
   text-decoration: none;
 }
 
-.image-options-buttons {
-  margin-bottom: 100px;
-}
 .image-options-buttons > span {
-  font-size: 20px;
-  float: right;
-  padding: 7px;
+  font-size: 16px;
 }
 
 .image-options-buttons > a {
