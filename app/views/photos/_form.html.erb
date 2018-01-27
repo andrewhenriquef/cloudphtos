@@ -1,13 +1,13 @@
 <div class="card card-upload col-md-4">
-	<h3>Upload a new photo to gallery</h3>
+	<h3 class="text-center">Upload a new image to gallery</h3>
 	<%= form_with model: @photo do |form| %>
 		<div class="form-group title-group">
-			<%= form.label :title %>
+			<%= form.label :title, 'Description' %>
 			<%= form.text_field :title, class: 'form-control'%>
 		</div>
 
 		<label class="btn btn-primary btn-block upload-button btn-sm">
-			Upload a image
+			Choose a image
 			<%= form.file_field :image, style: 'display:none;', id: 'image-field', onchange: 'readURL(this)' %>
 		</label>
 		<label class="text-center" id="file-inputed" style="display:none;"></label>
@@ -15,7 +15,7 @@
 
 		<div class="form-buttons row">
 			<%= link_to 'back', photos_path, class: 'col-md-4' %>
-			<%= form.submit 'Save', class: 'col-md-8 btn btn-success btn-block btn-save btn-sm' %>
+			<%= form.submit 'Upload', class: 'col-md-8 btn btn-success btn-block btn-save btn-sm' %>
 		</div>
 	<%end%>
 </div>

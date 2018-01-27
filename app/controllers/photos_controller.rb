@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
 	before_action :authenticate_user!
 	before_action :set_photo, only: [:show, :destroy]
+	include PhotosHelper
 
 	def index
 		@photos = Photo.where(user_id: current_user.id)
@@ -14,7 +15,6 @@ class PhotosController < ApplicationController
 		@photo = Photo.new(photo_params)
 		@photo.user_id = current_user.id
 
-
 		respond_to do |format|
       if @photo.save
         format.html { redirect_to @photo, notice: 'Your photo is now live.' }
@@ -25,6 +25,7 @@ class PhotosController < ApplicationController
 	end
 
 	def show
+		@url = download_image @photo
 	end
 
 	def destroy

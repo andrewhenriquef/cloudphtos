@@ -5,14 +5,18 @@
 
     <div class="image-options-buttons row">
       <%= link_to 'Back', photos_path, class: "back-link col-md-4"%>
-      <%= link_to 'Delete', photo_path(@photo), class: 'col-md-8 btn btn-danger btn-block btn-delete', method: 'delete', data: {confirm: "Are you sure?"} %>    
-      
-      <span class="text-right col-md-12">
-      Image uploaded <%= distance_of_time_in_words(@photo.created_at, Time.now)%> ago
-    </span>
+      <span class="text-right col-md-8 photo-date-uploaded">
+        Image uploaded <%= distance_of_time_in_words(@photo.created_at, Time.now)%> ago
+      </span>
+      <%= link_to 'Download image', @url, class: 'col-md-12 btn btn-outline-primary btn-block'%>
+      <%= link_to 'Delete image', photo_path(@photo), class: 'col-md-12 btn btn-outline-danger btn-block', method: 'delete', data: {confirm: "Are you sure?"} %>
     </div>
-
-    <div class="col-md-12 text-justify photo-title"><%= if @photo.title.blank? then 'No title to show' else @photo.title end %></div>       
+    
+    Image description 
+    <div class="col-md-12 text-center photo-title">
+      
+      <%= if @photo.title.blank? then 'No description to show' else @photo.title end %>
+    </div>       
   </div>
 
   <div class="col-md-8">

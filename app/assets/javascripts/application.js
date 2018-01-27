@@ -18,18 +18,6 @@
 //= require turbolinks
 //= require_tree .
 
-
-//set image name in a label when image is ready to be uploaded
-
-$(document).ready(function(){
-  $("input[type=file]").change(function(){
-    //console.log(document.getElementById("image-field").files[0].name);
-    //document.getElementById('file-inputed').style.display = 'block';
-    //set text of label as the name of file inputed
-    //$('#file-inputed').text(document.getElementById("image-field").files[0].name);
-  });
-});
-
 //this function set the image upload in a image tag to user preview the image
 function readURL(input) {
   document.getElementById('image-selected').style.display = 'block';
