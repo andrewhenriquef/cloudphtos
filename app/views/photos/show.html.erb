@@ -1,21 +1,30 @@
 <div class="row">
-  
-  
   <div class="col-md-4 text-center image-options">
-
+    
     <div class="image-options-buttons row">
       <%= link_to 'Back', photos_path, class: "back-link col-md-4"%>
       <span class="text-right col-md-8 photo-date-uploaded">
         Image uploaded <%= distance_of_time_in_words(@photo.created_at, Time.now)%> ago
       </span>
       <%= link_to 'Download image', @url, class: 'col-md-12 btn btn-outline-primary btn-block'%>
+      <button class="col-md-12 btn btn-outline-success btn-block edit-button" onclick="show_form_description();"> Edit description </button>
       <%= link_to 'Delete image', photo_path(@photo), class: 'col-md-12 btn btn-outline-danger btn-block', method: 'delete', data: {confirm: "Are you sure?"} %>
     </div>
     
-    Image description 
-    <div class="col-md-12 text-center photo-title">
-      
-      <%= if @photo.title.blank? then 'No description to show' else @photo.title end %>
+    <div id="form-description" class="form-group">
+      <%= label_tag(:title, "Description") %>
+      <%= text_field_tag(:title, @photo.title, id: "title-field", class: 'form-control') %>
+      <button onclick='update_title(<%= @photo.id %>)' class="btn btn-primary">save</button>
+      <button onclick='hide_form_description()' class="btn btn-default">cancel</button>
+    </div>
+
+    <div id="span-description">
+      Image description 
+      <div class="col-md-12 text-center photo-title">
+        <span id="description">
+          <%= if @photo.title.blank? then 'No description to show' else @photo.title end %>
+        </span>
+      </div>
     </div>       
   </div>
 

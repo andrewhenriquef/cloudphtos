@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :photos
+  resources :photos do
+    put :update_title
+  end
+
   devise_for :users
   #get 'welcome/index'
   

@@ -28,6 +28,18 @@ class PhotosController < ApplicationController
 		@url = download_image @photo
 	end
 
+	def update_title
+		@photo = Photo.find(params[:photo_id])
+
+		unless @photo.title == params
+			if @photo.update(title: params[:photo_title])
+				render body: nil #render nothing doesn't work anymore, WHYY??
+			else
+				redirect_to @photo
+			end
+		end
+	end
+
 	def destroy
 		@photo.destroy
 		respond_to do |format|
@@ -37,7 +49,7 @@ class PhotosController < ApplicationController
 
 	private
 		def photo_params
-			params.require(:photo).permit(:title, :image)
+			params.require(:photo).permit(:title, :image, :photo_title)
 		end
 
 		def set_photo
