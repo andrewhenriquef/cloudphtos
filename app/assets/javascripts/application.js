@@ -10,6 +10,35 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+//this function set the image upload in a image tag to user preview the image
+function readURL(input) {
+  document.getElementById('image-selected').style.display = 'block';
+
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function (e) {
+      //change label to show in form view of photos
+      document.getElementById('file-inputed').style.display = 'block';
+      //show image name in label tag
+      $('#file-inputed')
+        .text(document.getElementById("image-field").files[0].name);
+      //set image preview in image tag
+      $('#image-selected')
+        .attr('src', e.target.result)
+        .width('100%')
+        .height('auto')
+        .attr('alt', input.files[0].name);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}

@@ -1,13 +1,21 @@
-<%= form_with model: @photo do |form| %>
-	<div class="form-group">
-		<%= form.label :title %>
-		<%= form.text_field :title %>
-	</div>
-	
-	<div class="form-group">
-		<%= form.label :image %>
-		<%= form.file_field :image %>
-	</div>
+<div class="card card-upload col-md-4">
+	<h3 class="text-center">Upload a new image to gallery</h3>
+	<%= form_with model: @photo do |form| %>
+		<div class="form-group title-group">
+			<%= form.label :title, 'Description' %>
+			<%= form.text_field :title, class: 'form-control'%>
+		</div>
 
-	<%= form.submit %>
-<%end%>
+		<label class="btn btn-primary btn-block upload-button btn-sm">
+			Choose a image
+			<%= form.file_field :image, style: 'display:none;', id: 'image-field', onchange: 'readURL(this)' %>
+		</label>
+		<label class="text-center" id="file-inputed" style="display:none;"></label>
+		<img id="image-selected" src="" alt="" height="42" width="42" style="display:none;", class="img-thumbnail" >
+
+		<div class="form-buttons row">
+			<%= link_to 'back', photos_path, class: 'col-md-4' %>
+			<%= form.submit 'Upload', class: 'col-md-8 btn btn-success btn-block btn-save btn-sm' %>
+		</div>
+	<%end%>
+</div>

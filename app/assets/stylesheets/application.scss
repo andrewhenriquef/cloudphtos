@@ -1,0 +1,187 @@
+@import "bootstrap";
+@import "font-awesome";
+
+//index photos
+.photos-gallery {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.card {
+  width: 17rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+
+.card-image-title {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+}
+
+.card-image-title{
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.photos-gallery:hover {
+  text-decoration: none;
+}
+
+.index-title {
+  font-family: 'Caveat', cursive;
+  font-size: 44px;
+  margin-bottom: 30px;
+}
+
+//new form
+.upload-new-photo-title{
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+}
+
+.upload-new-photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.upload-new-photo-icon {
+  font-size: 200px;
+  margin-right: 0px !important;
+}
+
+.photos{
+  margin-bottom: 30px;
+}
+
+.new-photo-link-inline {
+  display: flex;
+  justify-content: center;
+}
+
+.new-photo-icon-link-inline {
+  font-size: 80px;
+}
+
+.new-photo-title-link-inline{
+  padding-top: 27px;
+  margin-right: 10px;
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  float: left;
+}
+
+.link-inline {
+  padding-left: 75px;
+}
+
+.link-inline:hover{
+  text-decoration: none;
+}
+
+body {
+  background-image: url('playstation-pattern.png');
+  background-repeat: repeat;
+}
+
+.card-upload {    
+  min-width: 420px;
+  //top right botton left
+  padding: 25px 30px;
+  font-family: 'Caveat', cursive;
+
+}
+
+.upload-button{
+  font-size: 20px;
+}
+
+
+.card-upload > .form-buttons{
+  font-size: 20px;
+}
+
+.title-group{
+  font-size: 20px;
+}
+
+.btn-save {
+  font-size: 20px;
+}
+
+.form-buttons {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.form-buttons > a{
+  padding: 0px;
+  font-size: 20px;
+}
+
+.form-buttons > a:hover {
+  text-decoration: none;
+}
+
+#image-selected {
+  margin-bottom: 10px; 
+}
+
+//show image
+.image-options {
+  font-family: 'Caveat', cursive;
+  font-size: 35px;
+}
+
+.photo-image {
+  width: 90%;
+  height: auto;
+}
+
+.photo-title{
+  padding-left: 0px;
+  font-size: 27px;
+}
+
+.image-options > a:hover {
+  text-decoration: none;
+  padding: 0px 15px;
+}
+
+.back-link {
+  font-size: 27px;
+}
+
+.back-link:hover {
+  text-decoration: none;
+}
+
+.image-options-buttons > span {
+  font-size: 16px;
+}
+
+.image-options-buttons > a {
+  font-size: 20px;
+  float: left;
+  padding: 7px;
+}
+
+.photo-date-uploaded {
+  padding-top: 10px;
+}
+
+#form-description {
+  display: none;
+}
+
+.edit-button {
+  font-size: 20px;
+}
