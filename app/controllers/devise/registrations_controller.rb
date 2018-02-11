@@ -14,6 +14,9 @@ class Devise::RegistrationsController < DeviseController
   def create
     build_resource(sign_up_params)
 
+    
+    binding.pry
+    
     resource.save
     yield resource if block_given?
     if resource.persisted?
@@ -136,11 +139,11 @@ class Devise::RegistrationsController < DeviseController
   end
 
   def sign_up_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :avatar, :email, :password, :password_confirmation)
   end
 
   def account_update_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :current_password)
+    params.require(:user).permit(:name, :avatar, :email, :password, :password_confirmation, :current_password)
   end
 
   def translation_scope
